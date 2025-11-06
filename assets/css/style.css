@@ -54,10 +54,15 @@
 }
 .brand img {
   max-width: 140px;
-  width: 140px;
+  width: auto;
   height: auto;
   object-fit: contain;
   display: block;
+}
+.brand .logo-img {
+  height: 60px;
+  width: auto;
+  max-width: 140px;
 }
 
 .nav {
