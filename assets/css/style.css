@@ -786,10 +786,10 @@ body > section:last-of-type {
 }
 
 .brand-text {
-  color: var(--theme-primary);
-  font-weight: 600;
-  font-size: 1.2rem;
-  margin-left: 8px;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1.18rem;
+  letter-spacing: -.01em;
 }
 
 .logo-img {
@@ -802,9 +802,6 @@ body > section:last-of-type {
 .brand {
   text-decoration: none;
 }
-
-.brand-text {
-  display: none;
 }
 
 .footer-link {
