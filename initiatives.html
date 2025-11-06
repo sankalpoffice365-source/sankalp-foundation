@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sankalp Foundation USA — Initiatives</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="header-include"></div>
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(html => {
+        var temp = document.createElement('div');
+        temp.innerHTML = html;
+        var include = document.getElementById('header-include');
+        while (temp.firstChild) {
+          include.parentNode.insertBefore(temp.firstChild, include);
+        }
+        include.parentNode.removeChild(include);
+        var s1 = document.createElement('script');
+        s1.src = 'assets/js/header-menu.js';
+        document.body.appendChild(s1);
+        var sMap = document.createElement('script');
+        sMap.src = 'assets/js/nav-map.js';
+        document.body.appendChild(sMap);
+        var s2 = document.createElement('script');
+        s2.src = 'assets/js/nav-active.js';
+        document.body.appendChild(s2);
+      });
+  </script>
+
+  <section id="initiatives" aria-labelledby="initiatives-title">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Our Work</div>
+        <h2 id="initiatives-title" class="h2">Foundation-Level Initiatives</h2>
+        <p class="lead">Through our programs, we create meaningful impact in the lives of individuals and families. Currently, we operate Sankalp Learning Center, with plans to expand our reach to serve other communities in need.</p>
+      </div>
+      
+      <div class="grid-2" style="max-width: 1000px; margin: 0 auto;">
+        <article class="card" style="border: 2px solid var(--theme-primary);">
+          <div class="icon" aria-hidden="true" style="font-size: 3rem; margin-bottom: 16px;">🌟</div>
+          <h3>Sankalp Learning Center</h3>
+          <p class="muted" style="font-size: 1.1rem; line-height: 1.7;">
+            Our flagship educational program providing personalized learning paths for neurodiverse children. Combining TEKS-aligned academics with integrated therapies and life skills training.
+          </p>
+          <a href="https://sankalplearning.org" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="margin-top: 16px;">
+            Visit Learning Center →
+          </a>
+        </article>
+        
+        <article class="card">
+          <div class="icon" aria-hidden="true" style="font-size: 3rem; margin-bottom: 16px;">🌱</div>
+          <h3>Namaskar Program</h3>
+          <p class="muted" style="font-size: 1.1rem; line-height: 1.7;">
+            A community-building initiative focused on cultural connection, family support, and inclusive social activities. Coming soon.
+          </p>
+        </article>
+        
+        <article class="card">
+          <div class="icon" aria-hidden="true" style="font-size: 3rem; margin-bottom: 16px;">🤝</div>
+          <h3>Family Support Services</h3>
+          <p class="muted" style="font-size: 1.1rem; line-height: 1.7;">
+            Resources, workshops, and support groups for families. Currently integrated within Learning Center programs, with potential expansion as we grow.
+          </p>
+        </article>
+        
+        <article class="card">
+          <div class="icon" aria-hidden="true" style="font-size: 3rem; margin-bottom: 16px;">📚</div>
+          <h3>Advocacy & Education</h3>
+          <p class="muted" style="font-size: 1.1rem; line-height: 1.7;">
+            Public awareness campaigns, educational resources, and advocacy efforts to promote inclusion and understanding.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2025</span> Sankalp Foundation USA (501(c)(3)) — <a href="privacy-policy.html" class="footer-link">Privacy Policy</a></p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+

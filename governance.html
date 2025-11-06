@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sankalp Foundation USA — Governance</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="header-include"></div>
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(html => {
+        var temp = document.createElement('div');
+        temp.innerHTML = html;
+        var include = document.getElementById('header-include');
+        while (temp.firstChild) {
+          include.parentNode.insertBefore(temp.firstChild, include);
+        }
+        include.parentNode.removeChild(include);
+        var s1 = document.createElement('script');
+        s1.src = 'assets/js/header-menu.js';
+        document.body.appendChild(s1);
+        var sMap = document.createElement('script');
+        sMap.src = 'assets/js/nav-map.js';
+        document.body.appendChild(sMap);
+        var s2 = document.createElement('script');
+        s2.src = 'assets/js/nav-active.js';
+        document.body.appendChild(s2);
+      });
+  </script>
+
+  <section id="governance" aria-labelledby="governance-title">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Transparency</div>
+        <h2 id="governance-title" class="h2">Governance & Legal Documents</h2>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <article class="card">
+          <h3>Board of Directors</h3>
+          <p class="muted" style="font-size: 1.1rem; line-height: 1.7;">
+            Sankalp Foundation USA is governed by a volunteer board of directors committed to ensuring the organization's mission is fulfilled with integrity and accountability.
+          </p>
+        </article>
+        <article class="card" style="margin-top: 32px;">
+          <h3>Legal Documents</h3>
+          <p class="muted" style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 16px;">
+            As a 501(c)(3) organization, we maintain transparency through publicly available documents:
+          </p>
+          <ul class="muted" style="font-size: 1.1rem; line-height: 1.7; padding-left: 24px;">
+            <li><a href="docs/501c3_letter.pdf" target="_blank" style="color: var(--theme-primary);">501(c)(3) Determination Letter</a></li>
+            <li><a href="docs/BYLAWS.pdf" target="_blank" style="color: var(--theme-primary);">Bylaws</a></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2025</span> Sankalp Foundation USA (501(c)(3)) — <a href="privacy-policy.html" class="footer-link">Privacy Policy</a></p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+

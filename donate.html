@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sankalp Foundation USA — Donate</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="header-include"></div>
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(html => {
+        var temp = document.createElement('div');
+        temp.innerHTML = html;
+        var include = document.getElementById('header-include');
+        while (temp.firstChild) {
+          include.parentNode.insertBefore(temp.firstChild, include);
+        }
+        include.parentNode.removeChild(include);
+        var s1 = document.createElement('script');
+        s1.src = 'assets/js/header-menu.js';
+        document.body.appendChild(s1);
+        var sMap = document.createElement('script');
+        sMap.src = 'assets/js/nav-map.js';
+        document.body.appendChild(sMap);
+        var s2 = document.createElement('script');
+        s2.src = 'assets/js/nav-active.js';
+        document.body.appendChild(s2);
+      });
+  </script>
+
+  <section id="donate" aria-labelledby="donate-title">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Support Our Mission</div>
+        <h2 id="donate-title" class="h2">Donate to Sankalp Foundation USA</h2>
+        <p class="lead">Your contribution helps us provide educational programs, support services, and advocacy. Currently supporting Sankalp Learning Center, with plans to expand our reach to serve other communities in need.</p>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <article class="card">
+          <h3>Make a Donation</h3>
+          <p class="muted" style="font-size: 1.1rem; line-height: 1.7;">
+            Sankalp Foundation USA is a 501(c)(3) tax-exempt organization. Your donations are tax-deductible to the extent allowed by law.
+          </p>
+          <p class="muted" style="font-size: 1.1rem; line-height: 1.7; margin-top: 16px;">
+            <strong>EIN:</strong> [To be added]
+          </p>
+          <div style="margin-top: 32px;">
+            <p class="muted" style="font-size: 1rem; margin-bottom: 16px;">
+              Donation options coming soon. Please contact us for more information.
+            </p>
+            <a href="contact.html" class="btn btn-primary">Contact Us</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2025</span> Sankalp Foundation USA (501(c)(3)) — <a href="privacy-policy.html" class="footer-link">Privacy Policy</a></p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+

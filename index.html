@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sankalp Foundation USA — Home</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="header-include"></div>
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(html => {
+        var temp = document.createElement('div');
+        temp.innerHTML = html;
+        var include = document.getElementById('header-include');
+        while (temp.firstChild) {
+          include.parentNode.insertBefore(temp.firstChild, include);
+        }
+        include.parentNode.removeChild(include);
+        var s1 = document.createElement('script');
+        s1.src = 'assets/js/header-menu.js';
+        document.body.appendChild(s1);
+        var sMap = document.createElement('script');
+        sMap.src = 'assets/js/nav-map.js';
+        document.body.appendChild(sMap);
+        var s2 = document.createElement('script');
+        s2.src = 'assets/js/nav-active.js';
+        document.body.appendChild(s2);
+      });
+  </script>
+
+  <!-- Hero -->
+  <section id="home" class="hero" aria-labelledby="hero-title">
+    <h1 id="hero-title">Empowering lives through compassion and action.</h1>
+    <p class="sub">Sankalp Foundation USA is a 501(c)(3) nonprofit organization committed to creating meaningful impact through compassionate programs that support individuals and families in need. Currently, we operate Sankalp Learning Center, our flagship educational program for neurodiverse children.</p>
+    <div class="hero-cta">
+      <a href="mission.html" class="btn btn-primary">Our Mission</a>
+      <a href="initiatives.html" class="btn btn-outline">Our Initiatives</a>
+    </div>
+  </section>
+
+  <!-- Flagship Initiative Card -->
+  <section id="initiatives" aria-labelledby="initiatives-title">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Our Programs</div>
+        <h2 id="initiatives-title" class="h2">Building stronger communities, one program at a time</h2>
+      </div>
+      <div class="grid-2" style="max-width: 900px; margin: 0 auto;">
+        <article class="card" style="border: 2px solid var(--theme-primary); padding: 32px;">
+          <div class="icon" aria-hidden="true" style="font-size: 3rem; margin-bottom: 16px;">🌟</div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 16px;">Our Flagship Initiative</h3>
+          <h4 style="font-size: 1.3rem; margin-bottom: 12px; color: var(--theme-primary);">Sankalp Learning Center</h4>
+          <p class="muted" style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 24px;">
+            A comprehensive educational program providing personalized learning paths for neurodiverse children, combining academics, therapies, and life skills in a nurturing environment.
+          </p>
+          <a href="https://sankalplearning.org" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="display: inline-block;">
+            Visit Sankalp Learning Center →
+          </a>
+        </article>
+        <article class="card" style="padding: 32px;">
+          <div class="icon" aria-hidden="true" style="font-size: 3rem; margin-bottom: 16px;">🌱</div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 16px;">Coming Soon</h3>
+          <h4 style="font-size: 1.3rem; margin-bottom: 12px; color: var(--theme-primary);">Namaskar Program</h4>
+          <p class="muted" style="font-size: 1.1rem; line-height: 1.7;">
+            A new initiative focused on cultural connection and community building for families.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview -->
+  <section id="about-preview">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">About Us</div>
+        <h2 class="h2">A foundation built on purpose and care</h2>
+        <p class="lead">We believe every individual deserves the opportunity to thrive. Through our programs and initiatives, we create pathways to learning, growth, and independence.</p>
+      </div>
+      <div class="section-head" style="margin-top: 32px;">
+        <a href="about.html" class="btn btn-primary">Learn More About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2025</span> Sankalp Foundation USA (501(c)(3)) — <a href="privacy-policy.html" class="footer-link">Privacy Policy</a></p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sankalp Foundation USA — Mission</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="header-include"></div>
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(html => {
+        var temp = document.createElement('div');
+        temp.innerHTML = html;
+        var include = document.getElementById('header-include');
+        while (temp.firstChild) {
+          include.parentNode.insertBefore(temp.firstChild, include);
+        }
+        include.parentNode.removeChild(include);
+        var s1 = document.createElement('script');
+        s1.src = 'assets/js/header-menu.js';
+        document.body.appendChild(s1);
+        var sMap = document.createElement('script');
+        sMap.src = 'assets/js/nav-map.js';
+        document.body.appendChild(sMap);
+        var s2 = document.createElement('script');
+        s2.src = 'assets/js/nav-active.js';
+        document.body.appendChild(s2);
+      });
+  </script>
+
+  <section id="mission" aria-labelledby="mission-title">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Our Purpose</div>
+        <h2 id="mission-title" class="h2">Mission & Vision</h2>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <article class="card">
+          <h3>Our Mission</h3>
+          <p class="muted" style="font-size: 1.1rem; line-height: 1.7;">
+            Sankalp Foundation USA is dedicated to empowering individuals and families through compassionate programs that address diverse needs. Currently, our focus is on Sankalp Learning Center, which provides comprehensive educational programs and therapeutic services for neurodiverse children and their families. As we grow, we envision expanding our reach to serve other communities in need, including elderly care, cancer support, and other areas where compassion and support can make a meaningful difference.
+          </p>
+        </article>
+        <article class="card" style="margin-top: 32px;">
+          <h3>Our Vision</h3>
+          <p class="muted" style="font-size: 1.1rem; line-height: 1.7;">
+            To build a world where every individual has access to the support, education, and care they need to thrive. We envision a future where compassion and understanding guide all interactions, and where communities come together to ensure no one is left behind—whether through educational programs, healthcare support, elder care, or other essential services.
+          </p>
+        </article>
+        <article class="card" style="margin-top: 32px;">
+          <h3>Our Values</h3>
+          <ul class="muted" style="font-size: 1.1rem; line-height: 1.7; padding-left: 24px;">
+            <li><strong>Compassion:</strong> Every individual deserves care, respect, and understanding.</li>
+            <li><strong>Inclusion:</strong> We create spaces where everyone belongs and can contribute.</li>
+            <li><strong>Excellence:</strong> We maintain high standards in education and support services.</li>
+            <li><strong>Collaboration:</strong> We work together with families, educators, and communities.</li>
+            <li><strong>Growth:</strong> We believe in continuous learning and development for all.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2025</span> Sankalp Foundation USA (501(c)(3)) — <a href="privacy-policy.html" class="footer-link">Privacy Policy</a></p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+

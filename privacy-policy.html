@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy - Sankalp Foundation USA</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="header-include"></div>
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(html => {
+        var temp = document.createElement('div');
+        temp.innerHTML = html;
+        var include = document.getElementById('header-include');
+        while (temp.firstChild) {
+          include.parentNode.insertBefore(temp.firstChild, include);
+        }
+        include.parentNode.removeChild(include);
+        var s1 = document.createElement('script');
+        s1.src = 'assets/js/header-menu.js';
+        document.body.appendChild(s1);
+        var sMap = document.createElement('script');
+        sMap.src = 'assets/js/nav-map.js';
+        document.body.appendChild(sMap);
+        var s2 = document.createElement('script');
+        s2.src = 'assets/js/nav-active.js';
+        document.body.appendChild(s2);
+      });
+  </script>
+  <section id="privacy" aria-labelledby="privacy-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="privacy-title" class="h2">Privacy Policy</h2>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <article class="card">
+          <p class="muted" style="font-size: 1.1rem; line-height: 1.7;">
+            <strong>Last Updated:</strong> January 2025
+          </p>
+          <p class="muted" style="font-size: 1.1rem; line-height: 1.7; margin-top: 16px;">
+            Sankalp Foundation USA ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.
+          </p>
+          <h3 style="margin-top: 32px;">Information We Collect</h3>
+          <p class="muted" style="font-size: 1.1rem; line-height: 1.7;">
+            We may collect information that you provide directly to us, such as when you fill out a contact form, make a donation, or subscribe to our newsletter.
+          </p>
+          <h3 style="margin-top: 32px;">How We Use Your Information</h3>
+          <p class="muted" style="font-size: 1.1rem; line-height: 1.7;">
+            We use the information we collect to respond to your inquiries, process donations, send you updates about our programs, and improve our services.
+          </p>
+          <h3 style="margin-top: 32px;">Contact Us</h3>
+          <p class="muted" style="font-size: 1.1rem; line-height: 1.7;">
+            If you have questions about this Privacy Policy, please contact us at <a href="mailto:info@sankalpfoundation.us.org" style="color: var(--theme-primary);">info@sankalpfoundation.us.org</a>.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2025</span> Sankalp Foundation USA (501(c)(3)) — <a href="privacy-policy.html" class="footer-link">Privacy Policy</a></p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

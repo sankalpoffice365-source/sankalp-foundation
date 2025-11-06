@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sankalp Foundation USA — About</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="header-include"></div>
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(html => {
+        var temp = document.createElement('div');
+        temp.innerHTML = html;
+        var include = document.getElementById('header-include');
+        while (temp.firstChild) {
+          include.parentNode.insertBefore(temp.firstChild, include);
+        }
+        include.parentNode.removeChild(include);
+        var s1 = document.createElement('script');
+        s1.src = 'assets/js/header-menu.js';
+        document.body.appendChild(s1);
+        var sMap = document.createElement('script');
+        sMap.src = 'assets/js/nav-map.js';
+        document.body.appendChild(sMap);
+        var s2 = document.createElement('script');
+        s2.src = 'assets/js/nav-active.js';
+        document.body.appendChild(s2);
+      });
+  </script>
+
+  <section id="about" aria-labelledby="about-title">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Our Organization</div>
+        <h2 id="about-title" class="h2">About Sankalp Foundation USA</h2>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <article class="card">
+          <p class="muted" style="font-size: 1.1rem; line-height: 1.7;">
+            Sankalp Foundation USA is a registered 501(c)(3) nonprofit organization committed to creating meaningful impact through compassionate programs. Founded on the principles of compassion, inclusion, and excellence, we work to create opportunities for growth, learning, and independence.
+          </p>
+          <p class="muted" style="font-size: 1.1rem; line-height: 1.7; margin-top: 16px;">
+            Currently, our foundation operates Sankalp Learning Center, our flagship educational program for neurodiverse children. As we grow, we envision expanding our reach to serve other communities in need, including elderly care, cancer support, and other areas where our mission of compassion and support can make a meaningful difference. We are governed by a dedicated board of directors and supported by a team of passionate educators, therapists, and advocates.
+          </p>
+          <p class="muted" style="font-size: 1.1rem; line-height: 1.7; margin-top: 16px;">
+            <strong>EIN:</strong> [To be added]<br>
+            <strong>Status:</strong> 501(c)(3) Tax-Exempt Organization
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2025</span> Sankalp Foundation USA (501(c)(3)) — <a href="privacy-policy.html" class="footer-link">Privacy Policy</a></p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
