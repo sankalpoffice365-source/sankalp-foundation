@@ -802,7 +802,6 @@ body > section:last-of-type {
 .brand {
   text-decoration: none;
 }
-}
 
 .footer-link {
   color: var(--theme-primary);
