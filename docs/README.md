@@ -1,7 +1,7 @@
-# Sankalp Foundation USA Website
+# Sankalp Inclusive Foundation Website
 
 ## Overview
-Sankalp Foundation USA is a 501(c)(3) nonprofit organization committed to creating meaningful impact through compassionate programs. Currently operating Sankalp Learning Center for neurodiverse children, with plans to expand to serve other communities in need.
+Sankalp Inclusive Foundation is a 501(c)(3) nonprofit organization committed to creating meaningful impact through compassionate programs. Currently operating Sankalp Learning Center for neurodiverse children, with plans to expand to serve other communities in need.
 
 ## Deployment
 
