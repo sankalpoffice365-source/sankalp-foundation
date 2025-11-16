@@ -26,8 +26,8 @@
     };
     
     // Start loading (browser will cache them)
-    dayImg.src = 'assets/tree-day-pencil.webp';
-    nightImg.src = 'assets/tree-night-pencil.webp';
+    dayImg.src = 'assets/images/tree-day-pencil.webp';
+    nightImg.src = 'assets/images/tree-night-pencil.webp';
   }
   
   // Start preloading after DOM is ready
