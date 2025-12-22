@@ -14,7 +14,7 @@ npx wrangler deploy
 Drag and drop the folder or use the Netlify CLI.
 
 ## Custom Domain
-- **Foundation Site:** `sankalpfoundation.us.org`
+- **Foundation Site:** `sankalpinclusive.org`
 - **Learning Center Site:** `sankalplearning.org` (separate project)
 
 ## Structure
@@ -30,5 +30,5 @@ Drag and drop the folder or use the Netlify CLI.
 
 ## Interlinking
 - Foundation site links to Learning Center: `https://sankalplearning.org`
-- Learning Center footer links to Foundation: `https://sankalpfoundation.us.org`
+- Learning Center footer links to Foundation: `https://sankalpinclusive.org`
 
