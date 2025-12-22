@@ -137,13 +137,15 @@
   box-shadow: 0 6px 16px rgba(184,160,130,0.25);
 }
 .btn-outline {
-  border-color: rgba(184,160,130,0.4);
-  color: rgba(184,160,130,0.8);
-  background: rgba(255,255,255,0.7);
+  border-color: var(--theme-primary-dark);
+  border-width: 2px;
+  color: var(--theme-primary-dark);
+  background: rgba(255,255,255,0.95);
   backdrop-filter: blur(10px);
   white-space: nowrap;
   font-size: 13px;
   padding: 10px 20px;
+  font-weight: 600;
 }
 .btn-outline:hover {
   background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-primary-dark) 100%);
