@@ -45,32 +45,52 @@
   flex-wrap: nowrap;
 }
 .nav-utility {
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(180%) blur(6px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: 6px 12px;
+}
+.nav-utility .utility-wrap {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 10px 20px 6px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 10px;
-  flex-wrap: wrap;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: saturate(180%) blur(12px);
-  border-bottom: 1px solid var(--theme-primary-pale);
-  position: relative;
-  z-index: 1001;
+}
+.nav-utility .utility-left,
+.nav-utility .utility-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .nav-utility .btn {
   min-height: 44px;
+  font-size: 12px;
+  line-height: 1;
+  padding: 8px 10px;
+  border-radius: 999px;
 }
 .nav-utility .utility-link {
   background: transparent;
-  border-color: transparent;
+  border: 1px solid rgba(0,0,0,0.15);
   color: var(--theme-primary-dark);
   box-shadow: none;
+  opacity: 0.9;
 }
 .nav-utility .utility-link:hover,
 .nav-utility .utility-link:focus-visible {
   background: var(--theme-primary-pale);
+}
+.nav-utility .utility-donate,
+.nav-utility .utility-contact {
+  border: 1px solid rgba(0,0,0,0.10);
+}
+.nav-utility .utility-contact {
+  box-shadow: 0 3px 8px rgba(184,160,130,0.18);
 }
 .brand {
   display: flex;
@@ -293,6 +313,18 @@ section {
     padding: 28px 16px 20px 16px;
   }
 }
+@media (max-width: 520px) {
+  .nav-utility .utility-wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 8px;
+  }
+  .nav-utility .utility-left,
+  .nav-utility .utility-right {
+    width: 100%;
+    justify-content: center;
+  }
+}
 /* Consolidated grid-2 definition above handles this */
 
 .card.gradient {
@@ -487,14 +519,7 @@ section {
     padding: 8px 8px;
   }
   .nav-utility {
-    padding: 10px 8px 6px;
-    justify-content: center;
-  }
-  .nav-utility {
-    display: flex;
-  }
-  .nav-utility .btn {
-    padding: 8px 14px;
+    padding: 6px 8px;
   }
 }
 @media (min-width: 901px) {
