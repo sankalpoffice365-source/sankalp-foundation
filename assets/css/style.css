@@ -38,11 +38,11 @@
   max-width: 1100px;
   margin: 0 auto;
   padding: 12px 20px;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: nowrap;
+  column-gap: 24px;
+  justify-content: start;
 }
 .banner {
   position: sticky;
@@ -117,6 +117,9 @@
   align-items: center;
   flex-wrap: nowrap;
   flex-shrink: 0;
+}
+.nav {
+  justify-self: start;
 }
 .nav a {
   font-size: 14px;
@@ -490,6 +493,7 @@ section {
     width: 110px;
   }
   .nav-wrap {
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
