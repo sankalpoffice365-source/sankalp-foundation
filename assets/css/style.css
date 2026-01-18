@@ -47,15 +47,30 @@
 .nav-utility {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 10px 20px 0;
+  padding: 10px 20px 6px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 10px;
   flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--theme-primary-pale);
+  position: relative;
+  z-index: 1001;
 }
 .nav-utility .btn {
   min-height: 44px;
+}
+.nav-utility .utility-link {
+  background: transparent;
+  border-color: transparent;
+  color: var(--theme-primary-dark);
+  box-shadow: none;
+}
+.nav-utility .utility-link:hover,
+.nav-utility .utility-link:focus-visible {
+  background: var(--theme-primary-pale);
 }
 .brand {
   display: flex;
@@ -117,16 +132,6 @@
   gap: 10px;
   align-items: center;
   flex-shrink: 0;
-}
-.nav-utility {
-  display: none;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 8px 16px 12px;
 }
 .btn {
   display: inline-flex;
