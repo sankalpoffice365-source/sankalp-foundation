@@ -44,6 +44,19 @@
   gap: 12px;
   flex-wrap: nowrap;
 }
+.nav-utility {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.nav-utility .btn {
+  min-height: 44px;
+}
 .brand {
   display: flex;
   align-items: center;
@@ -467,6 +480,10 @@ section {
     position: relative;
     width: 100%;
     padding: 8px 8px;
+  }
+  .nav-utility {
+    padding: 10px 8px 6px;
+    justify-content: center;
   }
   .nav-utility {
     display: flex;

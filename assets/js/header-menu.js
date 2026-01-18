@@ -3,7 +3,6 @@
   // Wait for DOM to be ready
   function initMenu() {
     var nav = document.querySelector('.nav');
-    var cta = document.querySelector('.nav-cta');
     var navWrap = document.querySelector('.nav-wrap');
     if (!nav || !navWrap) {
       // Retry if elements not ready yet
@@ -35,7 +34,6 @@
       var expanded = btn.getAttribute('aria-expanded') === 'true';
       btn.setAttribute('aria-expanded', !expanded);
       nav.classList.toggle('nav-open');
-      if (cta) cta.classList.toggle('nav-open');
     });
 
     // Close nav when clicking outside
@@ -43,7 +41,6 @@
       if (!nav.contains(e.target) && !btn.contains(e.target)) {
         btn.setAttribute('aria-expanded', 'false');
         nav.classList.remove('nav-open');
-        if (cta) cta.classList.remove('nav-open');
       }
     });
 
@@ -52,7 +49,6 @@
       if (window.innerWidth > 900) {
         btn.setAttribute('aria-expanded', 'false');
         nav.classList.remove('nav-open');
-        if (cta) cta.classList.remove('nav-open');
       }
     });
 
@@ -62,7 +58,6 @@
         setTimeout(function() {
           btn.setAttribute('aria-expanded', 'false');
           nav.classList.remove('nav-open');
-          if (cta) cta.classList.remove('nav-open');
         }, 300);
       }
     });
