@@ -322,18 +322,29 @@ section {
     align-items: center;
     gap: 12px;
   }
+  .topbar-logo img {
+    width: 76px;
+    height: auto;
+    display: block;
+  }
   .topbar-title {
     text-align: left;
     line-height: 1.15;
+    min-width: 0;
   }
   .topbar-title .title-primary { font-size: 18px; font-weight: 700; }
   .topbar-title .title-secondary { font-size: 13px; font-weight: 500; opacity: 0.9; margin-top: 2px; }
+  .topbar-right {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .nav-toggle { justify-self: end; }
   .topbar-cta {
     grid-column: 1 / -1;
     width: 100%;
     justify-content: center;
     gap: 12px;
-    margin-top: 6px;
+    margin-top: 8px;
   }
 }
 @media (min-width: 769px) {
@@ -478,7 +489,7 @@ section {
   }
 }
 @media (max-width: 900px) {
-  .nav-hamburger {
+  .nav-toggle {
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
@@ -491,7 +502,7 @@ section {
     cursor: pointer;
     z-index: 1100;
   }
-  .nav-hamburger span {
+  .nav-toggle span {
     display: block;
     width: 28px;
     height: 4px;
@@ -570,7 +581,7 @@ section {
   }
 }
 @media (min-width: 901px) {
-  .nav-hamburger {
+  .nav-toggle {
     display: none !important;
   }
   .nav {

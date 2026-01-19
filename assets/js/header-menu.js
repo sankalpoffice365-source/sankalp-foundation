@@ -12,11 +12,11 @@
     }
 
     // Check if hamburger already exists
-    if (document.querySelector('.nav-hamburger')) return;
+    if (document.querySelector('.nav-toggle')) return;
 
     // Create hamburger button
     var btn = document.createElement('button');
-    btn.className = 'nav-hamburger';
+    btn.className = 'nav-toggle';
     btn.setAttribute('aria-label', 'Toggle menu');
     btn.setAttribute('aria-expanded', 'false');
     btn.innerHTML = '<span></span><span></span><span></span>';
