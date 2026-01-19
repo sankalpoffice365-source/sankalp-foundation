@@ -67,8 +67,7 @@
   padding-bottom: 8px;
 }
 .topbar-row {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
   align-items: center;
   gap: 16px;
 }
@@ -316,9 +315,23 @@ section {
   }
 }
 @media (max-width: 768px) {
+  .topbar-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 12px;
+  }
+  .topbar-title {
+    text-align: left;
+    line-height: 1.15;
+  }
+  .topbar-title .title-primary { font-size: 18px; font-weight: 700; }
+  .topbar-title .title-secondary { font-size: 13px; font-weight: 500; opacity: 0.9; margin-top: 2px; }
   .topbar-cta {
     width: 100%;
     justify-content: center;
+    gap: 12px;
+    margin-top: 6px;
   }
 }
 @media (min-width: 769px) {
