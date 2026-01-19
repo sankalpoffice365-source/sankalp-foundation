@@ -66,35 +66,53 @@
   padding-top: 8px;
   padding-bottom: 8px;
 }
-.banner-text {
-  margin: 0;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.3;
-  max-width: 70%;
+.topbar-row1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
-.banner-link,
-.banner-link:visited {
+.topbar-title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.25;
+  flex: 1;
+}
+.topbar-link,
+.topbar-link:visited {
   color: inherit;
   text-decoration: underline;
   text-underline-offset: 2px;
   font-weight: 600;
 }
-.banner-link:focus-visible {
+.topbar-link:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 2px;
 }
-.banner-cta {
-  margin-left: auto;
+.topbar-row2 {
+  display: flex;
+  justify-content: flex-end;
+}
+.topbar-cta {
   display: flex;
   gap: 8px;
   flex-wrap: nowrap;
 }
-.banner-cta .btn {
+.topbar-cta .btn {
   min-height: 40px;
   font-size: 12px;
   padding: 6px 10px;
 }
+.brand-mobile {
+  display: none;
+}
+.topbar-hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 44px;
+}
+/* banner text styles replaced by topbar-title/topbar-link/topbar-cta */
 .brand {
   display: flex;
   align-items: center;
@@ -308,15 +326,35 @@ section {
     flex-direction: column;
     align-items: flex-start;
   }
-  .banner-text {
-    font-size: 18px;
-    font-weight: 700;
-    max-width: 100%;
+}
+@media (max-width: 768px) {
+  .topbar-row1 {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
   }
-  .banner-cta {
-    margin-left: 0;
-    width: 100%;
-    justify-content: flex-start;
+  .topbar-title {
+    text-align: center;
+    font-size: 19px;
+    font-weight: 700;
+  }
+  .topbar-row2 {
+    justify-content: center;
+  }
+  .brand-mobile {
+    display: flex;
+  }
+  .header-main .brand {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .topbar-row1 {
+    align-items: center;
+  }
+  .topbar-title {
+    font-size: 17px;
+    font-weight: 600;
   }
 }
 /* Consolidated grid-2 definition above handles this */

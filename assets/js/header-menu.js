@@ -4,6 +4,7 @@
   function initMenu() {
     var nav = document.querySelector('.nav');
     var navWrap = document.querySelector('.header-main .nav-wrap');
+    var hamburgerSlot = document.querySelector('.topbar-hamburger');
     if (!nav || !navWrap) {
       // Retry if elements not ready yet
       setTimeout(initMenu, 100);
@@ -20,12 +21,16 @@
     btn.setAttribute('aria-expanded', 'false');
     btn.innerHTML = '<span></span><span></span><span></span>';
     
-    // Insert after logo
-    var brand = navWrap.querySelector('.brand');
-    if (brand && brand.nextSibling) {
-      navWrap.insertBefore(btn, brand.nextSibling);
+    // Insert into mobile topbar slot when available
+    if (hamburgerSlot) {
+      hamburgerSlot.appendChild(btn);
     } else {
-      navWrap.appendChild(btn);
+      var brand = navWrap.querySelector('.brand');
+      if (brand && brand.nextSibling) {
+        navWrap.insertBefore(btn, brand.nextSibling);
+      } else {
+        navWrap.appendChild(btn);
+      }
     }
 
     // Toggle nav visibility
