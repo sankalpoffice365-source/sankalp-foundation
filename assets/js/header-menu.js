@@ -4,7 +4,7 @@
   function initMenu() {
     var nav = document.querySelector('.nav');
     var navWrap = document.querySelector('.header-main .nav-wrap');
-    var hamburgerSlot = document.querySelector('.nav-hamburger-slot');
+    var hamburgerSlot = document.querySelector('.topbar-hamburger');
     if (!nav || !navWrap) {
       // Retry if elements not ready yet
       setTimeout(initMenu, 100);

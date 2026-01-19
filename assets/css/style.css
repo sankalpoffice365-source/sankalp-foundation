@@ -67,7 +67,8 @@
   padding-bottom: 8px;
 }
 .topbar-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 16px;
 }
@@ -93,7 +94,7 @@
 }
 .topbar-cta {
   display: flex;
-  gap: 8px;
+  gap: 12px;
   flex-wrap: nowrap;
   justify-content: flex-end;
 }
@@ -328,6 +329,7 @@ section {
   .topbar-title .title-primary { font-size: 18px; font-weight: 700; }
   .topbar-title .title-secondary { font-size: 13px; font-weight: 500; opacity: 0.9; margin-top: 2px; }
   .topbar-cta {
+    grid-column: 1 / -1;
     width: 100%;
     justify-content: center;
     gap: 12px;
