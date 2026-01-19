@@ -73,9 +73,6 @@
 }
 .topbar-title {
   margin: 0;
-  font-size: 17px;
-  font-weight: 600;
-  line-height: 1.25;
   flex: 1;
 }
 .topbar-link,
@@ -335,8 +332,6 @@ section {
   }
   .topbar-title {
     text-align: center;
-    font-size: 19px;
-    font-weight: 700;
   }
   .topbar-row2 {
     justify-content: center;
@@ -352,10 +347,41 @@ section {
   .topbar-row1 {
     align-items: center;
   }
-  .topbar-title {
-    font-size: 17px;
-    font-weight: 600;
+  .brand-mobile {
+    display: none;
   }
+  .topbar-hamburger {
+    display: none;
+  }
+}
+
+/* ==== Relationship Title Block ==== */
+.topbar-title {
+  text-align: center;
+  line-height: 1.2;
+}
+.topbar-title .title-primary {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.topbar-title .title-secondary {
+  font-weight: 500;
+  opacity: 0.9;
+}
+.topbar-title a,
+.topbar-title a:visited {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+@media (max-width: 768px) {
+  .topbar-title .title-primary { font-size: 18px; }
+  .topbar-title .title-secondary { font-size: 13px; margin-top: 2px; }
+  .topbar-title { padding: 4px 8px; }
+}
+@media (min-width: 769px) {
+  .topbar-title .title-primary { font-size: 17px; }
+  .topbar-title .title-secondary { font-size: 14px; }
 }
 /* Consolidated grid-2 definition above handles this */
 
