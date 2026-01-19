@@ -27,9 +27,10 @@
 /* Responsive Layout & Components for Sankalp Learning Center */
 
 .site-header {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 2000;
 }
 .navbar {
   position: static;
