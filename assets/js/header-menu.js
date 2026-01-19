@@ -4,7 +4,7 @@
   function initMenu() {
     var nav = document.querySelector('.nav');
     var navWrap = document.querySelector('.header-main .nav-wrap');
-    var hamburgerSlot = document.querySelector('.topbar-hamburger');
+    var hamburgerSlot = document.querySelector('.nav-hamburger-slot');
     if (!nav || !navWrap) {
       // Retry if elements not ready yet
       setTimeout(initMenu, 100);
@@ -25,12 +25,7 @@
     if (hamburgerSlot) {
       hamburgerSlot.appendChild(btn);
     } else {
-      var brand = navWrap.querySelector('.brand');
-      if (brand && brand.nextSibling) {
-        navWrap.insertBefore(btn, brand.nextSibling);
-      } else {
-        navWrap.appendChild(btn);
-      }
+      navWrap.appendChild(btn);
     }
 
     // Toggle nav visibility
