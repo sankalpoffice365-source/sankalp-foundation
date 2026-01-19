@@ -339,6 +339,14 @@ section {
   .header-main .brand {
     display: none;
   }
+  .topbar-cta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 6px;
+  }
 }
 @media (min-width: 769px) {
   .topbar-row1 {
