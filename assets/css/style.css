@@ -107,13 +107,6 @@
   display: block !important;
   visibility: visible !important;
 }
-.brand .logo-img {
-  height: 60px;
-  width: auto;
-  max-width: 140px;
-  display: block !important;
-  visibility: visible !important;
-}
 
 .nav {
   display: flex;
