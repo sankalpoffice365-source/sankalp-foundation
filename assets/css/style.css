@@ -345,6 +345,8 @@ section {
 }
 @media (min-width: 769px) {
   .topbar-row1 {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
   }
   .brand-mobile {
@@ -380,8 +382,8 @@ section {
   .topbar-title { padding: 4px 8px; }
 }
 @media (min-width: 769px) {
-  .topbar-title .title-primary { font-size: 17px; }
-  .topbar-title .title-secondary { font-size: 14px; }
+  .topbar-title .title-primary { font-size: 18px; font-weight: 700; }
+  .topbar-title .title-secondary { font-size: 14px; font-weight: 500; }
 }
 /* Consolidated grid-2 definition above handles this */
 
