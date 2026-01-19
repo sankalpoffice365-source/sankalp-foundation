@@ -365,11 +365,11 @@ section {
     align-items: center;
   }
   .topbar-title {
-    text-align: left;
+    text-align: center;
     min-width: 0;
   }
-  .topbar-title-main { font-size: 18px; }
-  .topbar-title-sub { font-size: 13px; }
+  .topbar-title-main { font-size: 20px; }
+  .topbar-title-sub { font-size: 14px; }
   .topbar-cta { display: none; }
   .topbar-actions-mobile { display: flex; }
   .nav-toggle { display: inline-flex; margin-left: 8px; }
