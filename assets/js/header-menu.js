@@ -28,37 +28,67 @@
       navWrap.appendChild(btn);
     }
 
+    function setNavOpen(isOpen, shouldFocus) {
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      if (isOpen) {
+        nav.removeAttribute('hidden');
+        nav.classList.add('nav-open');
+      } else {
+        nav.setAttribute('hidden', '');
+        nav.classList.remove('nav-open');
+        if (shouldFocus) {
+          btn.focus();
+        }
+      }
+    }
+
+    function isMobile() {
+      return window.innerWidth <= 768;
+    }
+
+    if (isMobile()) {
+      nav.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
+    } else {
+      nav.removeAttribute('hidden');
+    }
+
     // Toggle nav visibility
     btn.addEventListener('click', function(e) {
       e.stopPropagation();
       var expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', !expanded);
-      nav.classList.toggle('nav-open');
+      setNavOpen(!expanded);
     });
 
     // Close nav when clicking outside
     document.addEventListener('click', function(e) {
-      if (!nav.contains(e.target) && !btn.contains(e.target)) {
-        btn.setAttribute('aria-expanded', 'false');
-        nav.classList.remove('nav-open');
+      if (isMobile() && !nav.contains(e.target) && !btn.contains(e.target)) {
+        setNavOpen(false);
       }
     });
 
     // Close nav on resize up
     window.addEventListener('resize', function() {
-      if (window.innerWidth > 900) {
+      if (isMobile()) {
+        setNavOpen(false);
+      } else {
+        nav.removeAttribute('hidden');
         btn.setAttribute('aria-expanded', 'false');
-        nav.classList.remove('nav-open');
       }
     });
 
     // Close nav on link click (mobile)
     nav.addEventListener('click', function(e) {
-      if (window.innerWidth <= 900 && e.target.tagName === 'A') {
+      if (isMobile() && e.target.tagName === 'A') {
         setTimeout(function() {
-          btn.setAttribute('aria-expanded', 'false');
-          nav.classList.remove('nav-open');
+          setNavOpen(false);
         }, 300);
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && isMobile()) {
+        setNavOpen(false, true);
       }
     });
   }

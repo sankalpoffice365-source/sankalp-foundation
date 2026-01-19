@@ -155,19 +155,24 @@
   visibility: visible !important;
 }
 
-.site-header .nav-wrap {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px 16px;
+.nav[hidden] {
+  display: none !important;
 }
-.site-header .nav {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  flex-wrap: nowrap;
-  flex-shrink: 0;
-  width: 100%;
-  justify-content: center;
+@media (min-width: 769px) {
+  .site-header .nav-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 16px;
+  }
+  .site-header .nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    width: 100%;
+    justify-content: center;
+  }
 }
 .nav a {
   font-size: 14px;
