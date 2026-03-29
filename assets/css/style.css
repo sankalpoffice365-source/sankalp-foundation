@@ -988,3 +988,238 @@ footer {
     padding: 0.5rem;
   }
 }
+
+/* ---- Donate page (Zelle) — scoped to #donate ---- */
+#donate .card:hover {
+  transform: translateY(-2px);
+}
+
+#donate .donate-layout {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+#donate .donate-zelle-card {
+  margin-bottom: 24px;
+  padding-bottom: 40px;
+}
+
+#donate .donate-zelle-title {
+  font-size: clamp(1.35rem, 3vw, 1.55rem);
+  color: var(--theme-primary-dark);
+  margin: 0 0 12px;
+}
+
+#donate .donate-zelle-intro {
+  font-size: 1.08rem;
+  line-height: 1.65;
+  margin: 0 0 12px;
+}
+
+#donate .donate-zelle-tagline {
+  font-size: 0.98rem;
+  line-height: 1.55;
+  margin: 0 0 28px;
+  padding: 12px 16px;
+  background: var(--theme-primary-pale);
+  border-radius: 12px;
+  border: 1px solid rgba(184, 160, 130, 0.22);
+}
+
+#donate .donate-zelle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+  margin-bottom: 32px;
+}
+
+#donate .donate-qr-frame {
+  background: var(--surface);
+  border: 1.5px solid rgba(184, 160, 130, 0.28);
+  border-radius: 18px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+#donate .donate-qr-img {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin: 0 auto 16px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+#donate .donate-qr-help {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 6px;
+}
+
+#donate .donate-qr-help-secondary {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+#donate .donate-qr-disclaimer {
+  font-size: 0.85rem;
+  line-height: 1.45;
+  margin: 16px 0 0;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#donate .donate-subheading {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 14px;
+  letter-spacing: -0.02em;
+}
+
+#donate .donate-recipient-list {
+  margin: 0;
+}
+
+#donate .donate-recipient-list > div {
+  margin-bottom: 18px;
+}
+
+#donate .donate-recipient-list > div:last-child {
+  margin-bottom: 0;
+}
+
+#donate .donate-recipient-list dt {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin: 0 0 6px;
+}
+
+#donate .donate-recipient-list dd {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+#donate .donate-zelle-contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+#donate .donate-zelle-value {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 1rem;
+  word-break: break-all;
+  flex: 1;
+  min-width: 0;
+}
+
+#donate .donate-copy-btn {
+  flex-shrink: 0;
+  min-height: 44px;
+}
+
+#donate .donate-steps-block {
+  padding-top: 8px;
+  border-top: 1px solid rgba(184, 160, 130, 0.2);
+  margin-bottom: 28px;
+}
+
+#donate .donate-steps {
+  margin: 0;
+  padding-left: 1.35rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+#donate .donate-steps li {
+  margin-bottom: 10px;
+}
+
+#donate .donate-steps li:last-child {
+  margin-bottom: 0;
+}
+
+#donate .donate-receipt-note {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  padding: 18px 20px;
+  background: var(--theme-primary-pale);
+  border-radius: 14px;
+  border-left: 4px solid var(--theme-primary);
+}
+
+#donate .donate-receipt-note p {
+  margin: 0;
+}
+
+#donate .donate-receipt-note a {
+  color: var(--theme-primary-dark);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+#donate .donate-receipt-note a:focus-visible {
+  outline: 2px solid var(--theme-primary);
+  outline-offset: 2px;
+}
+
+#donate .donate-trust-card {
+  margin-bottom: 24px;
+}
+
+#donate .donate-trust-title {
+  font-size: 1.2rem;
+  color: var(--theme-primary-dark);
+  margin: 0 0 12px;
+}
+
+#donate .donate-trust-meta {
+  margin-top: 14px;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+#donate .donate-other-card {
+  margin-bottom: 0;
+}
+
+#donate .donate-other-title {
+  font-size: 1.2rem;
+  color: var(--theme-primary-dark);
+  margin: 0 0 12px;
+}
+
+#donate .donate-other-cta {
+  margin-top: 20px;
+}
+
+@media (max-width: 720px) {
+  #donate .donate-zelle-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  #donate .donate-zelle-contact-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #donate .donate-copy-btn {
+    width: 100%;
+  }
+}

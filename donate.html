@@ -36,24 +36,92 @@
       <div class="section-head">
         <div class="eyebrow">Support Our Mission</div>
         <h2 id="donate-title" class="h2">Donate to Sankalp Inclusive Foundation</h2>
-        <p class="lead">When you donate to Sankalp Inclusive Foundation, you are directly supporting the Sankalp Learning Center—its classrooms, teachers, materials, therapies, and student programs. Your support helps a child learn, grow, and thrive.</p>
+        <p class="lead">When you donate to Sankalp Inclusive Foundation, you directly support Sankalp Learning Center—its classrooms, teachers, materials, therapies, and student programs. Your support helps children learn, grow, and thrive in a home-away-from-home environment.</p>
       </div>
-      <div style="max-width: 800px; margin: 0 auto;">
-        <article class="card">
-          <h3>Make a Donation</h3>
-          <p class="muted" style="font-size: 1.1rem; line-height: 1.7;">
-            Sankalp Inclusive Foundation is a 501(c)(3) tax-exempt organization. Your donations are tax-deductible to the extent allowed by law. All contributions directly support the Sankalp Learning Center and its programs.
+
+      <div class="donate-layout">
+        <article class="card donate-zelle-card" aria-labelledby="donate-zelle-heading">
+          <h3 id="donate-zelle-heading" class="donate-zelle-title">Donate with Zelle</h3>
+          <p class="muted donate-zelle-intro">
+            Zelle is our preferred way to give right now: your full gift supports our mission with <strong>no card or platform processing fees</strong> taken out along the way.
           </p>
-          <p class="muted" style="font-size: 1.1rem; line-height: 1.7; margin-top: 16px;">
-            <strong>Texas File Number:</strong> 806296608
+          <p class="muted donate-zelle-tagline">
+            100% of your Zelle donation goes directly toward supporting our mission without processing fees.
           </p>
-          <p class="muted" style="font-size: 1rem; line-height: 1.6; margin-top: 12px;">
-            EIN available upon request for donation/grant verification.
-          </p>
-          <div style="margin-top: 32px;">
-            <p class="muted" style="font-size: 1rem; margin-bottom: 16px;">
-              Donation options coming soon. Please contact us for more information.
+
+          <div class="donate-zelle-grid">
+            <div class="donate-qr-frame">
+              <img
+                src="assets/images/zelle-qr-sankalp-inclusive-foundation.png"
+                alt="Scan this QR code with your banking app to send a Zelle donation to Sankalp Inclusive Foundation"
+                class="donate-qr-img"
+                width="220"
+                height="220"
+              >
+              <p class="muted donate-qr-help">Scan with your banking app to donate by Zelle</p>
+              <p class="muted donate-qr-help-secondary">Best for mobile and in-person giving</p>
+              <p class="muted donate-qr-disclaimer">If the Zelle enrollment for this account changes, this QR code may stop working. Email us if you need help completing a gift.</p>
+            </div>
+
+            <div class="donate-recipient-block">
+              <h4 class="donate-subheading">Recipient details</h4>
+              <dl class="donate-recipient-list">
+                <div>
+                  <dt>Recipient</dt>
+                  <dd>Sankalp Inclusive Foundation</dd>
+                </div>
+                <div>
+                  <dt>Zelle phone</dt>
+                  <dd class="donate-zelle-contact-row">
+                    <span class="donate-zelle-value" id="zelle-contact-display" data-copy-value="2549310388">(254) 931-0388</span>
+                    <button type="button" class="btn btn-secondary donate-copy-btn" data-donate-copy="zelle-contact-display" aria-label="Copy Zelle phone number to clipboard">
+                      Copy
+                    </button>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Memo</dt>
+                  <dd>Donation</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <div class="donate-steps-block">
+            <h4 class="donate-subheading" id="donate-steps-heading">How to donate with Zelle</h4>
+            <ol class="donate-steps" aria-labelledby="donate-steps-heading">
+              <li>Open your bank’s app or website</li>
+              <li>Choose Zelle</li>
+              <li>Send to <strong>(254) 931-0388</strong> (Zelle phone—use <strong>Copy</strong> beside the number to paste digits only)</li>
+              <li>Add memo: <strong>Donation</strong></li>
+            </ol>
+          </div>
+
+          <div class="donate-receipt-note" role="note">
+            <p>
+              Zelle donations do not automatically generate a tax receipt. If you would like a donation acknowledgment for your records, please email us at
+              <a href="mailto:info@sankalpinclusive.org">info@sankalpinclusive.org</a>.
             </p>
+          </div>
+        </article>
+
+        <article class="card donate-trust-card">
+          <h3 class="donate-trust-title">Our nonprofit status</h3>
+          <p class="muted">
+            <strong>Sankalp Inclusive Foundation</strong> is a 501(c)(3) tax-exempt organization supporting <strong>Sankalp Learning Center</strong>.
+          </p>
+          <p class="muted donate-trust-meta">
+            <strong>Texas File Number:</strong> 806296608<br>
+            <strong>EIN:</strong> available upon request for donation or grant verification.
+          </p>
+        </article>
+
+        <article class="card donate-other-card">
+          <h3 class="donate-other-title">Other ways to support</h3>
+          <p class="muted">
+            We also welcome corporate donations, grants, major gifts, checks, and partnership conversations. If you would like to explore a larger gift or collaborate with us, we would be glad to hear from you.
+          </p>
+          <div class="donate-other-cta">
             <a href="contact.html" class="btn btn-primary">Contact Us</a>
           </div>
         </article>
@@ -67,8 +135,47 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script>
+    (function () {
+      var btn = document.querySelector('[data-donate-copy]');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        var id = btn.getAttribute('data-donate-copy');
+        var el = id ? document.getElementById(id) : null;
+        if (!el) return;
+        var text = (el.getAttribute('data-copy-value') || el.textContent || '').trim();
+        if (!text) return;
+        function markCopied() {
+          var prev = btn.textContent;
+          btn.textContent = 'Copied';
+          btn.setAttribute('aria-label', 'Copied to clipboard');
+          setTimeout(function () {
+            btn.textContent = prev;
+            btn.setAttribute('aria-label', 'Copy Zelle phone number to clipboard');
+          }, 2200);
+        }
+        function fallbackCopy() {
+          var ta = document.createElement('textarea');
+          ta.value = text;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'fixed';
+          ta.style.left = '-9999px';
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            if (document.execCommand('copy')) markCopied();
+          } catch (e) { /* ignore */ }
+          document.body.removeChild(ta);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(markCopied).catch(fallbackCopy);
+        } else {
+          fallbackCopy();
+        }
+      });
+    })();
+  </script>
   <script src="assets/js/stars.js"></script>
   <script src="assets/js/image-loader.js"></script>
 </body>
 </html>
-
