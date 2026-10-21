@@ -7,6 +7,9 @@
     if (!form) return;
     
     form.addEventListener('submit', function(e) {
+      var action = form.getAttribute('action') || '';
+      if (action.indexOf('formsubmit.co') !== -1) return;
+
       e.preventDefault();
       
       var formData = new FormData(form);
@@ -17,8 +20,6 @@
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';
       
-      // Using Formspree or similar service
-      // Replace YOUR_FORM_ID with actual Formspree form ID
       fetch(form.action, {
         method: 'POST',
         body: formData,
@@ -50,7 +51,7 @@
         var message = form.querySelector('#message').value;
         var subject = encodeURIComponent('Contact from Sankalp Learning Center');
         var body = encodeURIComponent('Name: ' + form.querySelector('#first-name').value + ' ' + form.querySelector('#last-name').value + '\n\n' + message);
-        window.location.href = 'mailto:info@sankalplearning.org?subject=' + subject + '&body=' + body;
+        window.location.href = 'mailto:info@sankalpinclusive.org?subject=' + subject + '&body=' + body;
       });
     });
   }

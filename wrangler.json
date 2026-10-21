@@ -2,7 +2,8 @@
   "name": "sankalp-foundation",
   "compatibility_date": "2025-01-04",
   "assets": {
-    "directory": "."
+    "directory": ".",
+    "not_found_handling": "404-page"
   }
 }
 
