@@ -22,6 +22,9 @@
   --theme-primary-lighter: #EDE4D6; /* Extremely light golden */
   --theme-primary-dark: #A08D75; /* Extra soft dark brown */
   --theme-primary-pale: #FAF8F5; /* Ultra soft cream */
+  /* Button and footer-link contrast. Matches sankalp/assets/css/site.css */
+  --btn: #4A3D2E;
+  --btn-hover: #3A2F24;
 }
 
 /* Responsive Layout & Components for Sankalp Learning Center */
@@ -219,7 +222,7 @@
 }
 .btn-primary {
   margin-right: 0;
-  background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-primary-dark) 100%);
+  background: var(--btn);
   color: #fff !important;
   text-shadow: 0 1px 2px rgba(0,0,0,0.08);
   padding: 10px 22px;
@@ -231,7 +234,8 @@
   font-size: 13px;
 }
 .btn-primary:hover {
-  background: linear-gradient(135deg, var(--theme-primary-light) 0%, var(--theme-primary) 100%);
+  background: var(--btn-hover);
+  color: #fff !important;
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(184,160,130,0.25);
 }
@@ -963,12 +967,12 @@ body > section:last-of-type {
 }
 
 .footer-link {
-  color: var(--theme-primary);
+  color: var(--btn);
   text-decoration: underline;
 }
 
 .footer-link:hover {
-  color: var(--theme-primary-dark);
+  color: var(--btn-hover);
   text-decoration: underline;
 }
 
