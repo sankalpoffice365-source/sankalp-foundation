@@ -5,13 +5,13 @@ Sankalp Inclusive Foundation is a 501(c)(3) nonprofit organization committed to 
 
 ## Deployment
 
-### Cloudflare Pages
+Cloudflare Workers static assets, from this directory:
+
 ```bash
 npx wrangler deploy
 ```
 
-### Netlify
-Drag and drop the folder or use the Netlify CLI.
+`wrangler.json` publishes the repository root. The canonical host is `https://sankalpinclusive.org`. Redirect `www.sankalpinclusive.org` to that apex host in a Cloudflare redirect rule.
 
 ## Custom Domain
 - **Foundation Site:** `sankalpinclusive.org`
